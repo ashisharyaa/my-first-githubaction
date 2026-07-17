@@ -1,0 +1,27 @@
+name: Feature Branch Validator
+
+# Trigger the workflow on pushes to ANY branch, AND when a Pull Request is opened against main
+on:
+  push:
+    branches:
+      - '**'          # This matches every branch (including your feature branch)
+  pull_request:
+    branches:
+      - main          # Triggers when someone tries to merge into main
+
+jobs:
+  validate-code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v4
+
+      # This step dynamically prints the branch name you are currently working on
+      - name: Identify Current Branch
+        run: echo "Currently running validation checks on branch ${{ github.ref_name }}"
+
+      - name: Simulate Running Tests
+        run: |
+          echo "Running linter..."
+          echo "Running unit tests..."
+          echo "All checks passed successfully!"
