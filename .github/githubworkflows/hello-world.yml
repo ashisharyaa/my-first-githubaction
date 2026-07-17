@@ -1,6 +1,6 @@
 name: Feature Branch Validator
 
-# Trigger the workflow on pushes to ANY branch, AND when a Pull Request is opened against main
+# Trigger the workflow on pushes to ANY branch, AND when a Pull Request is opened against main.
 on:
   push:
     branches:
