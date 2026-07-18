@@ -20,4 +20,4 @@ jobs:
 
       # STEP 4: updating readme file
       - name: show message that readme file updated
-        run: echo "Hello buddy!! checkout the readme file for explanation.
+        run: echo "Hello buddy!! checkout the readme file for explanation."
