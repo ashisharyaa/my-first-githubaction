@@ -1,0 +1,19 @@
+name: Basic Branch Check
+
+on: [push]
+
+jobs:
+  check-branch:
+    runs-on: ubuntu-latest
+    steps:
+      # STEP 1: Bring your code into the virtual machine
+      - name: Checkout repository code
+        uses: actions/checkout@v4
+
+      # STEP 2: Your original print statement
+      - name: Show my branch name
+        run: echo "Hello! You just pushed code to the branch named -> ${{ github.ref_name }}"
+
+      # STEP 3: List the files to prove the code is there
+      - name: List files in the repository
+        run: ls -la
