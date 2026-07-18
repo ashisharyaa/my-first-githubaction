@@ -17,3 +17,7 @@ jobs:
       # STEP 3: List the files to prove the code is there
       - name: List files in the repository
         run: ls -la
+
+      # STEP 4: updating readme file
+      - name: show message that readme file updated
+        run: echo "Hello buddy!! checkout the readme file for explanation.
