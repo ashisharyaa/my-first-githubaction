@@ -3,8 +3,7 @@ name: Basic Branch Check
 # Trigger this action every single time code is pushed anywhere
 on:
   push:
-
-        branches:
+      branches:
           - '**'          # This matches every branch (including your feature branch)
   pull_request:
     branches:
