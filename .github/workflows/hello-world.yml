@@ -1,13 +1,13 @@
 name: Basic Branch Check
 
 # Trigger this action every single time code is pushed anywhere
-on:
-  push:
-      branches:
-          - '**'          # This matches every branch (including your feature branch)
-  pull_request:
-    branches:
-      - main          # Triggers when someone tries to merge into main
+on: [push]
+  #push:
+  #     branches:
+  #         - '**'          # This matches every branch (including your feature branch)
+  # pull_request:
+  #   branches:
+  #     - main          # Triggers when someone tries to merge into main
 
 
 jobs:
